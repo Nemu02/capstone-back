@@ -52,7 +52,7 @@ class Issue(db.Model):
     issue_nomenclature = db.Column(db.String)
     issue_size = db.Column(db.String)
     issue_nsn = db.Column(db.Integer, nullable= False)
-    issue_note = db.Column(db.Text(500))
+    issue_note = db.Column(db.Text)
     issue_count = db.Column(db.Integer)
     member_id = db.Column(db.Integer, db.ForeignKey('member.id'), nullable=False)
 
