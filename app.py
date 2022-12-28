@@ -5,6 +5,7 @@ from marshmallow_sqlalchemy import SQLAlchemySchema
 from flask_cors import CORS
 import os
 
+
 app = Flask(__name__)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -319,6 +320,7 @@ def add_gear():
 # gear/get
 @app.route("/gear/get")
 def get_gears():
+    
     all_gears = db.session.query(Gear).all()
     return jsonify(many_gear_schema.dump(all_gears))
 
